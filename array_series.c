@@ -5,6 +5,7 @@
 -------------------------------------------------------*/
 
 #include <stdio.h>
+#include <ctype.h>
 
 #define ARRAY_SIZE 15
 
@@ -19,14 +20,22 @@ int main() {
     int arr[ARRAY_SIZE] = {0};
     int arr_type = CONSTANT;
 
-    /*Receive an array from user*/
-    printf("Enter an array of 15 integers: \n");
-    for(int i = 0; i < ARRAY_SIZE; ++i) {
-        scanf("%d", &arr[i]);
-    }
 
-    /*Check the array type*/
+
+    /*Receive an array from user and check the array type*/
+    printf("Enter an array of %d integers:\n", ARRAY_SIZE);
     for(int i = 1; i < ARRAY_SIZE; ++i) {
+
+        int is_valid = scanf("%d", &arr[i]);
+
+        /*Check if input is valid*/
+        while(is_valid == 0) {
+            while(getchar() != '\n') {
+                ;
+            }
+            printf("Enter a valid value:\n");
+            is_valid = scanf("%d", &arr[i]);
+        }
 
         /*Check if increasing*/
         if((arr[i] > arr[i-1]) && (arr_type == CONSTANT)) {
