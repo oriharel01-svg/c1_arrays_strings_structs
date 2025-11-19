@@ -5,19 +5,6 @@
 -------------------------------------------------------*/
 
 
-/*------------------------------------------------------
-* Function Name - [Function Name here] 
-*
-* Function Purpose - [demonstrates proper documentation] 
-*
-* Parameters –  [IN first_parameter - an input sample parameter.] 
-*		        [INOUT second_parameter * – an input + output sample parameter]
-*		        [OUT third_parameter * – an output sample parameter]
-*
-* Return Values - [possible return value]
-*
-* Author - [Your full name here]
--------------------------------------------------------*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -312,5 +299,6 @@ int number_of_shows(char *file_name, char *string) {
     return number_of_shows;
 
 }
+
 
 
