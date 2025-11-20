@@ -1,23 +1,11 @@
 /*------------------------------------------------------
-* Filename: [Filename here]
-* Description: [Brief description of the program here]
-* Author: [Your full name here]
+* Filename: queens.c
+* Description: Program to print a solution for the game "8 queens"
+* Author: Gali Amrani and Ori Harel
 -------------------------------------------------------*/
 
 
-/*------------------------------------------------------
-* Function Name - [Function Name here] 
-*
-* Function Purpose - [demonstrates proper documentation] 
-*
-* Parameters –  [IN first_parameter - an input sample parameter.] 
-*		        [INOUT second_parameter * – an input + output sample parameter]
-*		        [OUT third_parameter * – an output sample parameter]
-*
-* Return Values - [possible return value]
-*
-* Author - [Your full name here]
--------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -85,6 +73,22 @@ int main() {
 }
 
 
+
+/*------------------------------------------------------
+* Function Name - number_of_in_danger(int board[][BOARD_SIDE], int size, int row, int col)
+*
+* Function Purpose - Check how many squares will be in danger as a result of adding a queen in a given position
+*
+* Parameters –  IN int (*board)[BOARD_SIDE] - the board to check
+*               IN int size - the board side size
+*               IN int row - the row index to check a queen at
+*               IN int col - the column index to check a queen at
+*
+* Return Values - number_of_dangerous (int) - the number of squres that will be in danger
+*
+* Author - Gali Amrani and Ori Harel
+-------------------------------------------------------*/
+
 int number_of_in_danger(int board[][BOARD_SIDE], int size, int row, int col){
     
 
@@ -100,6 +104,23 @@ int number_of_in_danger(int board[][BOARD_SIDE], int size, int row, int col){
     }
     return number_of_dangerous;
 }
+
+
+
+/*------------------------------------------------------
+* Function Name - update_board(int (*board)[BOARD_SIDE], int size, int row, int col)
+*
+* Function Purpose - Add a new queen to the board and update it accordingly
+*
+* Parameters –  IN int (*board)[BOARD_SIDE] - the board to update
+*               IN int size - the board side size
+*               IN int row - the row index to add a queen at
+*               IN int col - the column index to add a queen at
+*
+* Return Values - None
+*
+* Author - Gali Amrani and Ori Harel
+-------------------------------------------------------*/
 
 
 
@@ -119,6 +140,7 @@ void update_board(int (*board)[BOARD_SIDE], int size, int row, int col) {
         }
     }
 }
+
 
 
 
