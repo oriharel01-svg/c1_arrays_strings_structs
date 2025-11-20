@@ -13,7 +13,7 @@
 #define TAKEN 1 /*Define a taken square*/
 #define IN_DANGER 2 /*Define a square in danger*/
 
-#define BOARD_SIDE 7
+#define BOARD_SIDE 8
 #define MAX_DANGER 64
 
 int number_of_in_danger(int board[][BOARD_SIDE], int size, int row, int col);
@@ -140,6 +140,7 @@ void update_board(int (*board)[BOARD_SIDE], int size, int row, int col) {
         }
     }
 }
+
 
 
 
