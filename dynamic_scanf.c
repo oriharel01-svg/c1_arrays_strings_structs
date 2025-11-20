@@ -23,6 +23,12 @@ int main() {
     printf("Enter text: \n");
     buffer = dyn_scanf();
 
+    /*Check if buffer is NULL*/
+    if(NULL == buffer) {
+        printf("ERROR\n");
+        return 1;
+    }
+    
     /*Print the input string*/
     printf("The received string:\n");
     unsigned int i = 0;
@@ -100,5 +106,6 @@ char *dyn_scanf(void) {
     return string;
 
     
+
 
 }
